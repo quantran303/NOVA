@@ -1,0 +1,204 @@
+.team-scope {
+    --card-width: 280px;
+    --card-height: 420px;
+    --carousel-radius: 400px;
+    /* Độ rộng vòng xoay */
+    perspective: 1200px;
+    overflow: hidden;
+    padding: 40px 0 80px 0;
+    position: relative;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+/* Vùng chứa 3D */
+
+.carousel-3d {
+    position: relative;
+    width: 100%;
+    height: var(--card-height);
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+}
+
+.carousel-3d:active {
+    cursor: grabbing;
+}
+
+
+/* Thẻ thành viên */
+
+.member-card {
+    position: absolute;
+    width: var(--card-width);
+    height: var(--card-height);
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(16, 185, 129, 0.1);
+    /* Viền mỏng màu theme */
+    padding: 20px;
+    text-align: center;
+    transition: all 0.5s ease;
+    opacity: 0.9;
+    backface-visibility: hidden;
+    /* Ẩn mặt sau */
+    /* Layout bên trong card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+/* Ảnh thành viên */
+
+.member-img-box {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #10B981;
+    /* Màu theme primary */
+    margin-bottom: 15px;
+    box-shadow: 0 8px 16px rgba(16, 185, 129, 0.2);
+    transition: transform 0.3s;
+}
+
+.member-card:hover .member-img-box {
+    transform: scale(1.05);
+}
+
+.member-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Thông tin thành viên */
+
+.member-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 5px;
+}
+
+.member-info .role {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #10B981;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.member-info .bio {
+    font-size: 0.95rem;
+    color: #6B7280;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    /* Giới hạn số dòng */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+/* Social Links (nếu có) */
+
+.social-links {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #ECFDF5;
+    color: #10B981;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background: #10B981;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* Nút điều hướng */
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    color: #10B981;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn:hover {
+    background: #10B981;
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.nav-btn.prev {
+    left: 20px;
+}
+
+.nav-btn.next {
+    right: 20px;
+}
+
+
+/* Hiệu ứng khi active (ở giữa) */
+
+.member-card.active {
+    opacity: 1;
+    box-shadow: 0 30px 60px rgba(16, 185, 129, 0.15);
+    border: 2px solid #10B981;
+    z-index: 10;
+}
+
+
+/* Responsive cho mobile */
+
+@media (max-width: 768px) {
+    .team-scope {
+        --carousel-radius: 180px;
+        /* Thu nhỏ bán kính trên mobile */
+        --card-width: 240px;
+        --card-height: 380px;
+    }
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}

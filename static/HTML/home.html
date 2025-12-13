@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin</title>
+    <link rel="icon" type="image/ico" href="/static/IMG/logo-copy.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/CSS/style.css">
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="/static/JS/language.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Quicksand', 'sans-serif'],
+                    },
+                    colors: {
+                        'theme-light': '#FEFBF6',
+                        'theme-primary': '#10B981',
+                        'theme-secondary': '#3B82F6',
+                        'theme-accent': '#F59E0B',
+                        'theme-fire': '#EF4444',
+                        'theme-earth': '#D97706',
+                        'pastel-green': '#ECFDF5',
+                        'pastel-blue': '#EFF6FF',
+                        'pastel-yellow': '#FFFBEB',
+                        'pastel-red': '#FEF2F2',
+                        'pastel-orange': '#FFF7ED',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-theme-light font-sans text-gray-800 antialiased">
+
+    <!-- Thanh Điều Hướng (Header) -->
+
+    <body class="bg-theme-light font-sans text-gray-800 antialiased">
+
+        <!-- Thanh Điều Hướng (Header) -->
+        <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-white/50 backdrop-blur-sm">
+            <nav class="container mx-auto px-6 py-3 flex items-center justify-between">
+                <a class="font-display font-bold text-xl text-theme-primary flex items-center" href="/static/HTML/main.html">
+                    <img src="/static/IMG/logo.jpg" alt="Logo NOVA" class="h-14 w-auto mr-2"> Ngũ Hành Sơn Discovery Hub
+                </a>
+                <div class="hidden md:flex gap-3 items-center">
+                    <a class="nav-link px-3 py-2" href="/static/HTML/main.html">🏠 Trang chủ</a>
+                    <a class="nav-link px-3 py-2" href="/static/HTML/home.html">🌐 Thông tin</a>
+                    <a class="nav-link px-3 py-2" href="/static/HTML/tours.html">🚌 Dịch vụ & Tour</a>
+                    <a class="nav-link px-3 py-2" href="/static/HTML/sell.html">🎁 Tư vấn quà lưu niệm</a>
+                    <a class="nav-link px-3 py-2" href="/static/HTML/myself.html">🧩 Khám phá bản thân</a>
+                    <a class="nav-cta px-4 py-2 rounded-full" href="/static/HTML/contact.html">📶 Liên hệ</a>
+                    <div class="notranslate">
+                        <select id="lang-select" onchange="changeLanguage(this.value)">
+                        <option value="">🌍 Select Language</option>
+                        <option value="en">English</option>
+                        <option value="vi">Vietnamese</option>
+                        <option value="ja">Japanese</option>
+                        <option value="fr">French</option>
+                        <option value="ko">Korean</option>
+                        <option value="zh-TW">Traditional Chinese</option>
+                        <option value="hi">India</option>
+                    </select>
+                    </div>
+                    <div id="google_translate_element" style="display: none;"></div>
+                </div>
+                <button id="mobile-toggle" class="md:hidden px-2 py-1" aria-label="Mở menu">☰</button>
+            </nav>
+            <div id="mobile-menu" class="hidden md:hidden bg-white/90 border-t">
+                <div class="flex flex-col p-4">
+                    <a class="py-2" href="/static/HTML/main.html">🏠 Trang chủ</a>
+                    <a class="py-2" href="/static/HTML/home.html">🌐 Thông tin</a>
+                    <a class="py-2" href="/static/HTML/tours.html">🚌 Dịch vụ & Tour</a>
+                    <a class="py-2" href="/static/HTML/sell.html">🎁 Tư vấn quà lưu niệm</a>
+                    <a class="py-2" href="/static/HTML/myself.html">🧩 Khám phá bản thân</a>
+                    <a class="py-2 font-semibold" href="/static/HTML/contact.html">📶 Liên hệ</a>
+                    <div class="notranslate">
+                        <select id="lang-select" onchange="changeLanguage(this.value)">
+                        <option value="">🌍 Select Language</option>
+                        <option value="en">English</option>
+                        <option value="vi">Vietnamese</option>
+                        <option value="ja">Japanese</option>
+                        <option value="fr">French</option>
+                        <option value="ko">Korean</option>
+                        <option value="zh-TW">Traditional Chinese</option>
+                        <option value="zh"> Chinese</option>
+                        <option value="hi">India</option>
+                        </select>
+                    </div>
+                    <div id="google_translate_element" style="display: none;"></div>
+                </div>
+                <button id="mobile-toggle" class="md:hidden px-2 py-1" aria-label="Mở menu">☰</button>
+            </div>
+        </header>
+        <!-- Nội dung chính -->
+        <main>
+            <section id="quick-intro" class="pt-28 pb-10 bg-white">
+                <div class="container mx-auto px-6">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <h1 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">Về chúng tôi</h1>
+                        <!-- BẮT ĐẦU WIDGET TEAM ROTATION (Chèn vào trong section #quick-intro) -->
+
+                        <link rel="stylesheet" href="/static/CSS/profile.css">
+                        <!-- HTML Structure -->
+                        <div class="container mx-auto px-4 mt-8">
+                            <div class="team-scope" id="teamScope">
+                                <!-- Các nút điều hướng -->
+                                <button class="nav-btn prev" onclick="rotateCarousel(-1)">&#10094;</button>
+                                <button class="nav-btn next" onclick="rotateCarousel(1)">&#10095;</button>
+
+                                <!-- Trục quay 3D -->
+                                <div class="carousel-3d" id="carousel3D">
+                                    <!-- Các thành viên sẽ được render bằng JS -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <script src="/static/JS/memberprofile.js"></script>
+                        <!-- KẾT THÚC WIDGET -->
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 🪷 Trang Khám phá (Explore) -->
+            <section id="explore" class="pt-28 pb-5 bg-text-gray">
+                <div class="container mx-auto px-6">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">🪷 Khám phá Ngũ Hành</h2>
+                        <p class="text-xl text-gray-600 leading-relaxed">Mỗi ngọn núi mang một vẻ đẹp, một câu chuyện và một trải nghiệm riêng.</p>
+                    </div>
+
+                    <div class="space-y-12">
+                        <!-- Thủy Sơn -->
+                        <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center bg-pastel-blue p-8 rounded-2xl shadow-lg">
+                            <img src="/static/IMG/thuyson.jpg" alt="Thủy Sơn" class="w-full h-128 md:h-256 object-cover rounded-xl md:col-span-2">
+                            <div class="md:col-span-3">
+                                <h3 class="font-display text-3xl font-bold text-theme-secondary mb-3">🌊 Thủy Sơn</h3>
+                                <p class="text-gray-600 mb-4">Là một trong năm ngọn núi đẹp ở Đà Nẵng. Nơi đây chứa đựng vẻ đẹp của thiên nhiên hùng vĩ và nhiều địa điểm tham quan hấp dẫn, thú vị, mang đậm giá trị lịch sử. Đồng thời là địa điểm check in tuyệt đẹp dành cho mọi tín
+                                    đồ mê xê dịch.</p>
+                                <p class="text-gray-600 mb-4">Ngọn Thuỷ Sơn của núi Ngũ Hành Sơn là nơi hội tụ linh khí đất trời mang đến sự yên bình, tĩnh lặng và không kém phần cổ kính, bí ẩn. Nhờ vẻ đẹp thơ mộng, hữu tình, nơi đây trở thành địa điểm thu hút không chỉ đối với khách
+                                    trong nước và còn với khách quốc tế.</p>
+                                <p class="text-gray-600 mb-4">Đây còn được biết đến là ngọn núi cao nhất và lớn nhất trong 5 ngọn núi thuộc danh thắng Ngũ Hành Sơn. Ngọn núi này sở hữu diện tích khoảng 93.872m2 và có độ cao 106m so với mực nước biển.</p>
+                                <p class="text-gray-600 mb-4">Theo sử sách chép lại thì Thuỷ Sơn Ngũ Hành Sơn chính là ngọn núi được vua Minh Mạng ghé thăm nhiều lần. Đó là vào các năm 1825, 1827, 1837. Hai con đường dẫn lên núi cũng được vua Minh Mạng cho xây dựng khi đặt chân đến
+                                    thắng cảnh này.</p>
+                                <p class="text-gray-600 mb-4">Thuỷ Sơn Ngũ Hành Sơn là ngọn núi thuộc danh thắng Ngũ Hành Sơn, phường Hoà Hải, Ngũ Hành Sơn, Đà Nẵng. Nơi đây nằm cách trung tâm thành phố khoảng 11km.</p>
+                                <p class="text-gray-600 mb-4">Địa điểm này nằm trên tuyến đường đi Đà Nẵng – Hội An, phù hợp để khách tour Hội An Ngũ Hành đến tham quan, trải nghiệm.</p>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="bg-blue-200 text-blue-800 text-sm font-semibold px-4 py-1 rounded-full">Tour gợi ý: Tour Tâm Linh</span>
+                                    <span class="bg-blue-200 text-blue-800 text-sm font-semibold px-4 py-1 rounded-full">Sản phẩm: Thiệp chúc, tượng Phật nhỏ</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mộc Sơn -->
+                        <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center bg-pastel-green p-8 rounded-2xl shadow-lg">
+                            <img src="/static/IMG/mocson.jpeg" alt="Mộc Sơn" class="w-full h-full md:h-full object-cover rounded-xl md:col-span-2">
+                            <div class="md:col-span-3">
+                                <h3 class="font-display text-3xl font-bold text-theme-primary mb-3">🌿 Mộc Sơn</h3>
+                                <p class="text-gray-600 mb-4">Là ngọn núi nằm ở phía Đông gần với Thuỷ Sơn Ngũ Hành Sơn. Ngọn núi này còn được biết đến với cái tên núi Mồng Gà và là địa điểm tham quan được nhiều du khách thích đến khám phá.</p>
+                                <p class="text-gray-600 mb-4">Mộc Sơn Ngũ Hành Sơn nằm ở phía đông của danh thắng, sát biển. Phía Bắc là ruộng đồng, phía tây là xóm làng. Đỉnh núi đá bị xẻ thành hình răng cưa trông giống như chiếc mồng gà trống.</p>
+                                <p class="text-gray-600 mb-4">Mặc dù được đặt tên là Mộc Sơn nhưng đây là ngọn núi có ít cây cối nhất, đồng thời là ngọn núi duy nhất ở Ngũ Hành Sơn không có chùa chiền hay tâm linh.</p>
+                                <p class="text-gray-600 mb-4">Ngoài việc khám phá Mộc Sơn, khách tour Hội An Ngũ Hành Sơn có thể kết hợp tham quan Kim Sơn Ngũ Hành Sơn hay Hoả Sơn Ngũ Hành Sơn ở gần đó.</p>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="bg-green-200 text-green-800 text-sm font-semibold px-4 py-1 rounded-full">Tour gợi ý: Tour Làng nghề Non Nước</span>
+                                    <span class="bg-green-200 text-green-800 text-sm font-semibold px-4 py-1 rounded-full">Sản phẩm: Vòng tay đá, tượng tỳ hưu, trang sức</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hỏa Sơn -->
+                        <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center bg-pastel-red p-8 rounded-2xl shadow-lg">
+                            <img src="/static/IMG/hoason.jpg" alt="Hỏa Sơn" class="w-full h-full md:h-full object-cover rounded-xl md:col-span-2">
+                            <div class="md:col-span-3">
+                                <h3 class="font-display text-3xl font-bold text-theme-fire mb-3">🔥 Hỏa Sơn</h3>
+                                <p class="text-gray-600 mb-4">Là ngọn núi nổi tiếng thu hút du khách. Hoả Sơn Ngũ Hành Sơn là nơi có phong cảnh núi non hùng vĩ và những ngôi chùa tâm linh, linh thiêng.</p>
+                                <p class="text-gray-600 mb-4">Núi Hoả Sơn là điểm đến mà du khách không thể bỏ lỡ trong tour Hội An Ngũ Hành Sơn. Đây được biết đến là hòn kép với Dương Hỏa Sơn và Âm Hoả Sơn với vẻ đẹp kỳ vĩ hút hồn người xem.</p>
+                                <p class="text-gray-600 mb-4">Núi Hoả Sơn nằm ở phía Tây núi Ngũ Hành Sơn Đà Nẵng, cách trung tâm thành phố khoảng 11km. Hoả Sơn Ngũ Hành Sơn nằm đối diện với núi Kim Sơn Ngũ Hành Sơn.</p>
+                                <p class="text-gray-600 mb-4">Ngọn núi này nằm ở trong danh thắng Ngũ Hành Sơn, toạ lạc ở 81 đường Huyền Trân Công Chúa, ở phường Hoà Hải, thuộc quận Ngũ Hành Sơn.</p>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="bg-red-200 text-red-800 text-sm font-semibold px-4 py-1 rounded-full">Tour gợi ý: Tour Chụp ảnh "Sống ảo"</span>
+                                    <span class="bg-red-200 text-red-800 text-sm font-semibold px-4 py-1 rounded-full">Sản phẩm: Tranh đá, quà lưu niệm in ảnh</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kim Sơn -->
+                        <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center bg-pastel-yellow p-8 rounded-2xl shadow-lg">
+                            <img src="/static/IMG/kimson.jpg" alt="Kim Sơn" class="w-full h-full md:h-full object-cover rounded-xl md:col-span-2">
+                            <div class="md:col-span-3">
+                                <h3 class="font-display text-3xl font-bold text-theme-accent mb-3">✨ Kim Sơn</h3>
+                                <p class="text-gray-600 mb-4">Là ngọn núi nổi bật giống như quả chuông khổng lồ úp ngược xuống dòng đất. Đứng ở đây, du khách sẽ được tận hưởng không gian xanh mát và tham quan nhiều điểm đến tâm linh hấp dẫn.</p>
+                                <p class="text-gray-600 mb-4">Núi Kim Sơn là một trong 6 ngọn núi tạo nên danh thắng Ngũ Hành Sơn. Địa chỉ nằm ở 81 Huyền Trân Công Chúa, phường Hoà Hải, Ngũ Hành Sơn.</p>
+                                <p class="text-gray-600 mb-4">Kim Sơn Ngũ Hành Sơn nằm ở phía bắc của 2 ngọn Hoả Sơn Ngũ Hành Sơn và Thổ Sơn Ngũ Hành Sơn. Núi nằm bên cạnh bờ sông Cổ Cò xanh mát.</p>
+                                <p class="text-gray-600 mb-4">Nằm trên tuyến đường du lịch Hội An nên du khách có thể kết hợp tour Hội An để khám phá phố cổ trầm mặc và thưởng thức đặc sản phố Hội hấp dẫn.</p>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="bg-yellow-200 text-yellow-800 text-sm font-semibold px-4 py-1 rounded-full">Tour gợi ý: Tour Thiền & Yoga</span>
+                                    <span class="bg-yellow-200 text-yellow-800 text-sm font-semibold px-4 py-1 rounded-full">Sản phẩm: Chuỗi hạt, đá phong thủy</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Thổ Sơn -->
+                        <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center bg-pastel-orange p-8 rounded-2xl shadow-lg">
+                            <img src="/static/IMG/thoson.jpg" alt="Thổ Sơn" class="w-full h-full md:h-full object-cover rounded-xl md:col-span-2">
+                            <div class="md:col-span-3">
+                                <h3 class="font-display text-3xl font-bold text-theme-earth mb-3">🌾 Thổ Sơn</h3>
+                                <p class="text-gray-600 mb-4">Còn được gọi là núi Đá Chồng hay núi Đá Ghềnh, có diện tích 37.090m2. Nhìn từ xa Thổ Sơn trông giống như con rồng dài nằm ngủ trên bãi cát. So với 4 ngọn núi còn lại thì Thổ Sơn là ngọn thấp nhất nhưng sở hữu phong cảnh
+                                    hữu tình, thơ mộng.</p>
+                                <p class="text-gray-600 mb-4">Thổ Sơn thuộc quần thể Ngũ Hành Sơn, toạ lạc ở phường Hoà Hải, quận Ngũ Hành Sơn. Địa chỉ chính xác là 81 đường Huyền Trân Công Chúa, Hoà Hải, Ngũ Hành Sơn.</p>
+                                <p class="text-gray-600 mb-4">Núi Thổ Sơn nằm ở phía Tây Bắc Ngũ Hành Sơn, nơi có vách đá dựng đứng và ít cây cối. Núi Thổ Sơn Ngũ Hành Sơn giáp với sông Cổ Cò ở phía Tây.</p>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="bg-orange-200 text-orange-800 text-sm font-semibold px-4 py-1 rounded-full">Tour gợi ý: Tour Mạo hiểm (Leo vách, khám phá hang)</span>
+                                    <span class="bg-orange-200 text-orange-800 text-sm font-semibold px-4 py-1 rounded-full">Sản phẩm: Đá cảnh, vật phẩm điêu khắc</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Giới thiệu ngắn -->
+            <section id="about-preview" class="py-20 bg-pastel-green">
+                <div class="container mx-auto px-6">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">Truyền thuyết Ngũ Hành Sơn</h2>
+                        <p class="text-xl text-gray-600 leading-relaxed">Nơi huyền thoại, văn hóa và thiên nhiên giao thoa.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                        <div class="rounded-xl overflow-hidden shadow-2xl">
+                            <img src="/static/IMG/truyen-thuyet.jpg" alt="Truyền thuyết Vỏ Trứng Rồng" class="w-full h-full object-cover">
+                        </div>
+
+                        <div class="text-gray-700 leading-loose">
+                            <!-- Truyền thuyết Vỏ Trứng Rồng & Sự hình thành Ngũ Hành Sơn -->
+                            <h3 class="font-display text-3xl font-bold text-theme-primary mb-4">Truyền thuyết Vỏ Trứng Rồng & Sự hình thành Ngũ Hành Sơn</h3>
+                            <p class="mb-4">
+                                Ngũ Hành Sơn – Non Nước không chỉ là danh thắng nổi tiếng mà còn gắn liền với truyền thuyết mang đậm bản sắc văn hóa Việt.
+                            </p>
+
+                            <!-- Sự tích hình thành -->
+                            <h3 class="font-display text-3xl font-bold text-theme-primary mb-4">Sự tích hình thành</h3>
+                            <p class="mb-4">
+                                Theo truyền thuyết, xưa kia có một cụ già sống đơn độc ven biển. Một ngày, biển động dữ dội, một con rồng khổng lồ xuất hiện và để lại một quả trứng lớn. Thần Kim Quy hiện lên, giao nhiệm vụ cho cụ già bảo vệ "giọt máu của Long Quân" và trao cho cụ chiếc
+                                móng thần để phòng thân.
+                            </p>
+
+                            <!-- Phép màu nhiệm mầu -->
+                            <h3 class="font-display text-3xl font-bold text-theme-primary mb-4">Phép màu nhiệm mầu</h3>
+                            <p class="mb-4">
+                                Cụ già chăm sóc quả trứng cẩn thận. Khi kẻ xấu tấn công, nhờ móng thần, cụ hóa thành hổ dữ đuổi địch. Trứng ngày càng lớn, chiếm hết không gian túp lều. Một đêm, kẻ xấu phóng hỏa, phép màu xuất hiện biến vỏ trứng thành năm ngọn núi đá cẩm thạch - chính
+                                là Ngũ Hành Sơn ngày nay.
+                            </p>
+
+                            <!-- Sự ra đời kỳ diệu -->
+                            <h3 class="font-display text-3xl font-bold text-theme-primary mb-4">Sự ra đời kỳ diệu</h3>
+                            <p class="mb-4">
+                                Từ trong trứng bước ra một bé gái xinh đẹp - con gái của Long Quân. Cụ già và cô bé sống trong hang đá, được chim thú giúp đỡ. Họ dạy dân làng trồng trọt, dệt vải và chữa bệnh.
+                            </p>
+
+                            <!-- Kết thúc viên mãn -->
+                            <h3 class="font-display text-3xl font-bold text-theme-primary mb-4">Sự ra đời kỳ diệu</h3>
+                            <p class="mb-4">
+                                Khi cô gái trưởng thành, gặp được hoàng tử và kết duyên. Thần Kim Quy đón cụ già xuống biển. Dân làng vì nhớ ơn đã đến sinh sống quanh núi, lập nên làng Non Nước.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="py-20 bg-theme-primary text-white">
+                <div class="container mx-auto px-6 text-center">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">Sẵn sàng khám phá?</h2>
+                    <p class="text-xl mb-10 max-w-2xl mx-auto">Bắt đầu hành trình của bạn ngay hôm nay với các dịch vụ tour được thiết kế đặc biệt</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button onclick="loadPage('/static/HTML/tours.html')" class="bg-white text-theme-primary font-bold py-3 px-8 rounded-full text-lg shadow-xl hover:bg-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                        Xem Dịch vụ & Tour
+                    </button>
+                        <button onclick="loadPage('/static/HTML/contact.html')" class="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full text-lg shadow-xl hover:bg-white hover:text-theme-primary transition-all duration-300 transform hover:scale-105">
+                        Liên hệ ngay
+                    </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-gray-300 py-12">
+            <div class="container mx-auto px-6 text-center">
+                <p class="font-display text-lg font-semibold mb-2">Dự án "Khám phá & Trải nghiệm Ngũ Hành Sơn"</p>
+                <p>&copy; 2025 - Thực hiện bởi Nova. Phát triển với tình yêu Đà Nẵng.</p>
+            </div>
+        </footer>
+
+        <!-- Modal Thông Báo -->
+        <div id="alert-modal" class="fixed bottom-6 right-6 z-[150] bg-gray-900 text-white px-6 py-4 rounded-lg shadow-2xl hidden transition-all duration-300" style="transform: translateY(20px); opacity: 0;">
+            <p id="alert-message"></p>
+        </div>
+
+        <script src="/static/JS/main.js"></script>
+        <script src="/static/JS/save.js"></script>
+        <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
+        <script>
+            new CozeWebSDK.WebChatClient({
+                config: {
+                    type: 'bot',
+                    bot_id: '7573626748227616821',
+                    isIframe: false,
+                },
+                auth: {
+                    type: 'token',
+                    token: 'pat_Ehq9D3fhPg4nAKgS05CYg5VzcyHYa1BkpEe0lpXyWdFzpFPczJDDfojMhJakNHqZ',
+                    onRefreshToken: async() => 'token'
+                },
+                disable_history: true,
+            });
+        </script>
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script src="/static/JS/language.js"></script>
+    </body>
+
+</html>

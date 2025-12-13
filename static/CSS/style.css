@@ -1,0 +1,382 @@
+/* ===== GLOBAL STYLES ===== */
+
+body {
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-reveal {
+    animation: reveal 0.5s ease-out forwards;
+}
+
+
+/* ===== NAVIGATION ===== */
+
+.nav-scrolled {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(8px);
+}
+
+.nav-link {
+    position: relative;
+    color: #4B5563;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #10B981;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #10B981;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-cta {
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+    transform: translateY(-2px);
+}
+
+
+/* ===== SCROLL REVEAL ===== */
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ===== QUIZ STYLES ===== */
+
+.quiz-option:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-color: #10B981;
+    cursor: pointer;
+}
+
+.quiz-option:active {
+    transform: scale(0.98);
+}
+
+
+/* ===== WISH LANTERN EFFECT ===== */
+
+.wish-lantern {
+    position: absolute;
+    padding: 0.75rem 1.25rem;
+    border-radius: 9999px;
+    background-color: #FFFBEB;
+    color: #D97706;
+    border: 1px solid #FDE68A;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+    animation: float-up 6s ease-in-out forwards;
+    will-change: transform, opacity;
+    z-index: 10;
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(0) scale(0.8);
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-120vh) scale(1.4);
+        opacity: 0;
+    }
+}
+
+
+/* ===== STARS BACKGROUND ===== */
+
+.stars {
+    background: black url("/static/IMG/stars.png") repeat top center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 150%;
+    height: 100%;
+}
+
+.twinkling {
+    width: 150%;
+    height: 100%;
+    background: transparent url("/static/IMG/twinkling.png") repeat top center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    animation: move-background 40s linear infinite;
+}
+
+.clouds {
+    width: 150%;
+    height: 100%;
+    background: transparent url("/static/IMG/clouds.png") repeat top center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+    opacity: .4;
+    animation: move-background 100s linear infinite;
+}
+
+@keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+@keyframes move-clouds-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 10000px 0;
+    }
+}
+
+
+/* ===== TEXT SHADOW UTILITIES ===== */
+
+.text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.text-shadow-md {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ===== BUTTON HOVER EFFECTS ===== */
+
+button {
+    transition: all 0.3s ease;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+
+/* ===== FORM STYLES ===== */
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #10B981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+
+/* ===== CARD HOVER EFFECTS ===== */
+
+.bg-white:hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* ===== SMOOTH TRANSITIONS ===== */
+
+* {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+
+/* ===== MODAL ANIMATIONS ===== */
+
+#tour-modal,
+#iframeModal,
+#alert-modal {
+    transition: all 0.3s ease;
+}
+
+#tour-modal .bg-white,
+#iframeModal .bg-white {
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+
+@media (max-width: 768px) {
+    .text-shadow-lg {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    .wish-lantern {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+
+/* ===== LOADING STATES ===== */
+
+.loading {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+
+/* ===== CUSTOM SCROLLBAR ===== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #10B981;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #059669;
+}
+
+
+/* ===== LANGUAGE ===== */
+
+.skiptranslate {
+    display: none !important;
+}
+
+Wind .goog-logo-link {
+    display: none !important;
+}
+
+.goog-te-gadget {
+    color: transparent !important;
+}
+
+
+/* ===== STAR BACKGROUND ===== */
+
+@keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+@keyframes move-clouds-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 10000px 0;
+    }
+}
+
+.stars,
+.twinkling,
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 150%;
+    height: 100%;
+    display: block;
+}
+
+.stars {
+    background: #000 url(/static/IMG/stars.png) repeat top center;
+    z-index: 0;
+}
+
+.twinkling {
+    background: transparent url(/static/IMG/twinkling.png) repeat top center;
+    z-index: 1;
+    animation: move-twink-back 200s linear infinite;
+}
+
+.clouds {
+    background: transparent url(/static/IMG/clouds.png) repeat top center;
+    z-index: 2;
+    opacity: .5;
+    animation: move-clouds-back 200s linear infinite;
+}
+
+@keyframes move-background {
+    from {
+        transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+        transform: translate3d(1000px, 0px, 0px);
+    }
+}
