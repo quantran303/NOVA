@@ -170,8 +170,8 @@ const quizData = [
 
 const quizResults = {
     wood: {
-        title: "Bạn là HÀNH MỘC 🌿",
-        icon: "🌿",
+        title: "Bạn là HÀNH MỘC 🌳",
+        icon: "🌳",
         color: "text-theme-primary",
         description: "Bạn yêu thiên nhiên, sáng tạo và luôn phát triển. Giống như Mộc Sơn, bạn là người gắn kết, mang lại sức sống và là cái nôi của những ý tưởng mới.",
         suggestion: "Trải nghiệm 'Tour Làng nghề Non Nước' và tự tay làm vòng đá chắc chắn sẽ hợp với bạn!"
@@ -184,8 +184,8 @@ const quizResults = {
         suggestion: "Bạn sinh ra để 'sống ảo'! 'Tour Chụp ảnh' tại Hỏa Sơn là dành cho bạn!"
     },
     earth: {
-        title: "Bạn là HÀNH THỔ 🌾",
-        icon: "🌾",
+        title: "Bạn là HÀNH THỔ ⛰️",
+        icon: "⛰️",
         color: "text-theme-earth",
         description: "Bạn ấm áp, đáng tin cậy và là chỗ dựa vững chắc cho mọi người. Bạn kiên nhẫn, nuôi dưỡng và bao dung như ngọn Thổ Sơn hiền hòa.",
         suggestion: "Bạn hợp với 'Tour Khám phá Mạo hiểm' để khám phá những hang động ẩn sâu trong lòng đất mẹ."
@@ -334,3 +334,7 @@ if (contactForm) {
         // contactForm.reset();
     });
 }
+// ===== loadpage function =====
+function loadPage(url) {
+        window.location.href = url;
+    }

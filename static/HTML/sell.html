@@ -120,16 +120,16 @@
             </div>
 
             <div class="question-group border-l-4 border-theme-primary pl-4 py-2 bg-pastel-green">
-                <h3 class="font-semibold text-xl text-gray-800 mb-4">2. Bạn thuộc mệnh gì? (Chọn 1)</h3>
-                <div class="options grid grid-cols-2 sm:grid-cols-3 gap-3">
-                    <label class="block p-3 rounded-lg bg-white shadow hover:bg-green-50 transition-colors"><input type="radio" name="menh" value="Kim" required class="mr-2 accent-theme-primary"> Kim</label>
-                    <label class="block p-3 rounded-lg bg-white shadow hover:bg-green-50 transition-colors"><input type="radio" name="menh" value="Moc" class="mr-2 accent-theme-primary"> Mộc</label>
-                    <label class="block p-3 rounded-lg bg-white shadow hover:bg-green-50 transition-colors"><input type="radio" name="menh" value="Thuy" class="mr-2 accent-theme-primary"> Thủy</label>
-                    <label class="block p-3 rounded-lg bg-white shadow hover:bg-green-50 transition-colors"><input type="radio" name="menh" value="Hoa" class="mr-2 accent-theme-primary"> Hỏa</label>
-                    <label class="block p-3 rounded-lg bg-white shadow hover:bg-green-50 transition-colors"><input type="radio" name="menh" value="Tho" class="mr-2 accent-theme-primary"> Thổ</label>
-                    <label class="block p-3 rounded-lg bg-white shadow hover:bg-green-50 transition-colors"><input type="radio" name="menh" value="KhongBiet" class="mr-2 accent-theme-primary"> Tôi không biết</label>
-                </div>
-            </div>
+    <h3 class="font-semibold text-xl text-gray-800 mb-4">2. Bạn thuộc mệnh gì? (Chọn 1)</h3>
+    <div class="options grid grid-cols-2 sm:grid-cols-3 gap-3">
+        <label class="block p-3 rounded-lg bg-white shadow hover:bg-green-50 transition-colors"><input type="radio" name="menh" value="Kim" required class="mr-2 accent-theme-primary"> Kim</label>
+        <label class="block p-3 rounded-lg bg-white shadow hover:bg-green-50 transition-colors"><input type="radio" name="menh" value="Mộc" class="mr-2 accent-theme-primary"> Mộc</label>
+        <label class="block p-3 rounded-lg bg-white shadow hover:bg-green-50 transition-colors"><input type="radio" name="menh" value="Thủy" class="mr-2 accent-theme-primary"> Thủy</label>
+        <label class="block p-3 rounded-lg bg-white shadow hover:bg-green-50 transition-colors"><input type="radio" name="menh" value="Hỏa" class="mr-2 accent-theme-primary"> Hỏa</label>
+        <label class="block p-3 rounded-lg bg-white shadow hover:bg-green-50 transition-colors"><input type="radio" name="menh" value="Thổ" class="mr-2 accent-theme-primary"> Thổ</label>
+        <label class="block p-3 rounded-lg bg-white shadow hover:bg-green-50 transition-colors"><input type="radio" name="menh" value="KhongBiet" class="mr-2 accent-theme-primary"> Tôi không biết</label>
+    </div>
+</div>
 
             <div class="question-group border-l-4 border-theme-accent pl-4 py-2 bg-pastel-yellow">
                 <h3 class="font-semibold text-xl text-gray-800 mb-4">3. Bạn đang tìm sản phẩm với mục đích gì? (Chọn nhiều đáp án)</h3>
@@ -189,71 +189,121 @@
             </div>
 
             <button type="submit" class="w-full bg-theme-secondary text-white font-bold py-4 rounded-xl text-lg shadow-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-[1.01]">
-                ✨ Gửi & Nhận Gợi Ý Tư Vấn Đá Phong Thủy
+                ✨ Gửi & nhận gợi ý tư vấn đá phong thủy
             </button>
         </form>
 
         <div id="consultResult" class="mt-12 p-6 md:p-8 bg-white rounded-2xl shadow-xl hidden">
-            <h3 class="font-display text-2xl font-bold text-gray-800 mb-4 border-b pb-2">🔮 Gợi Ý Tư Vấn Dành Cho Bạn</h3>
+            <h3 class="font-display text-2xl font-bold text-gray-800 mb-4 border-b pb-2">🔮 Gợi ý tư vấn dành cho bạn</h3>
             <div id="resultContent" class="text-gray-700 space-y-3"></div>
         </div>
     </div>
 </section>
+
+            <!-- các cửa hàng đá mỹ nghệ -->
 <section id="shop" class="page py-20 bg-white">
+    <div class="container mx-auto px-6 max-w-7xl"> 
+        <h2 class="font-display text-4xl font-bold text-center text-gray-800 mb-4">💎 CÁC CỬA HÀNG ĐÁ MỸ NGHỆ TIÊU BIỂU HIỆN ĐANG LIÊN KẾT VỚI CHÚNG TÔI</h2>
+        <p class="text-center text-xl text-gray-600 mb-12">Khám phá các địa chỉ uy tín với sản phẩm đá tự nhiên ở Ngũ Hành Sơn</p>
+        
+        <div class="flex flex-col sm:grid sm:grid-cols-2 sm:gap-8 lg:flex lg:flex-row lg:justify-center lg:gap-8">
+
+            <div class="shop-card bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:scale-[1.02]">
+                <img src="/static/IMG/da-tai-thao.png" alt="Cửa hàng Tài Thảo" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <span class="text-sm font-semibold text-gray-600 bg-gray-200 px-3 py-1 rounded-full">Điêu khắc</span>
+                    <p class="text-gray-500 text-sm">Nổi tiếng với các tượng đá lớn, tinh xảo, chất liệu đá tự nhiên.</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <span class="font-bold text-xl text-gray-600">Địa chỉ: Lô 13, đường Trương Gia Mô, phường Ngũ Hành Sơn, TP Đà Nẵng.</span>
+                        <a href="#" class="bg-gray-600 text-white text-sm px-4 py-2 rounded-full hover:bg-gray-700 transition-colors">Xem bản đồ</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-card bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:scale-[1.02]">
+                <img src="/static/IMG/logo-thai-thanh.jpg" alt="Cửa hàng đá Thái Thành" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <span class="text-sm font-semibold text-theme-secondary bg-pastel-blue px-3 py-1 rounded-full">Điêu khắc, trang sức & Đồ phong thủy</span>
+                    <p class="text-gray-500 text-sm">Đa dạng các mặt hàng vòng tay, mặt dây chuyền và vật phẩm phong thủy nhỏ.</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <span class="font-bold text-xl text-theme-secondary">Cơ sở 1: 710 Lê Văn Hiến, phường Ngũ Hành Sơn, TP Đà Nẵng</span>
+                        <span class="font-bold text-xl text-theme-secondary">Cơ sở 2: 6 Sư Vạn Hạnh, phường Ngũ Hành Sơn, TP Đà Nẵng</span>
+                        <a href="#" class="bg-theme-secondary text-white text-sm px-4 py-2 rounded-full hover:bg-blue-600 transition-colors">Xem bản đồ</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="text-center mt-16">
+             <a href="#" class="inline-block bg-theme-accent text-white font-bold py-3 px-10 rounded-full text-lg shadow-lg hover:bg-yellow-600 transition-all duration-300 transform hover:scale-105">
+                 XEM THÊM ĐỊA CHỈ CÁC CỬA HÀNG KHÁC
+             </a>
+        </div>
+    </div>
+</section>
+        <div class="text-center mt-16">
+             <a href="#" class="inline-block bg-theme-accent text-white font-bold py-3 px-10 rounded-full text-lg shadow-lg hover:bg-yellow-600 transition-all duration-300 transform hover:scale-105">
+                XEM TẤT CẢ SẢN PHẨM ĐÁ MỸ NGHỆ
+            </a>
+        </div>
+    </div>
+</section>
+<section id="featuredProducts" class="page py-20 bg-gray-50">
     <div class="container mx-auto px-6 max-w-7xl">
-        <h2 class="font-display text-4xl font-bold text-center text-gray-800 mb-4">💎 CỬA HÀNG ĐÁ MỸ NGHỆ TIÊU BIỂU</h2>
-        <p class="text-center text-xl text-gray-600 mb-12">Khám phá các sản phẩm đá tự nhiên phù hợp với Ngũ Hành Sơn</p>
+        <h2 class="font-display text-4xl font-bold text-center text-theme-fire mb-4">🛒 SẢN PHẨM ĐÁ TIÊU BIỂU</h2>
+        <p class="text-center text-xl text-gray-600 mb-12">Các vật phẩm đá mỹ nghệ và phong thủy được chế tác từ các cơ sở điêu khắc đá trong khu vực Ngũ Hành Sơn</p>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-center">
 
-            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:scale-[1.02]">
-                <img src="https://via.placeholder.com/600x400/10B981/ffffff?text=Vòng+Tay+Ngọc+Bích" alt="Vòng tay Ngọc Bích" class="w-full h-48 object-cover">
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:scale-[1.02] mx-auto w-full max-w-sm">
+                <img src="https://via.placeholder.com/600x400/EF4444/ffffff?text=Vòng+Thạch+Anh+Tím" alt="Vòng tay Thạch Anh Tím" class="w-full h-48 object-cover">
                 <div class="p-5">
-                    <span class="text-sm font-semibold text-theme-primary bg-pastel-green px-3 py-1 rounded-full">Hành Mộc</span>
-                    <h3 class="font-display text-xl font-bold text-gray-800 mt-2 mb-1">Vòng Tay Ngọc Bích</h3>
-                    <p class="text-gray-500 text-sm">Mang lại sự bình an, cân bằng và sức khỏe.</p>
+                    <span class="text-sm font-semibold text-theme-fire bg-pastel-red px-3 py-1 rounded-full">🔥 Hành hỏa</span>
+                    <h3 class="font-display text-xl font-bold text-gray-800 mt-2 mb-1">Vòng tay thạch anh tím</h3>
+                    <p class="text-gray-500 text-sm h-12">Đại diện cho trí tuệ, sức khỏe và sự thanh tịnh. Hợp mệnh Hỏa và Thổ.</p>
                     <div class="flex items-center justify-between mt-3">
-                        <span class="font-bold text-xl text-theme-primary">850.000 VND</span>
-                        <a href="#" class="bg-theme-primary text-white text-sm px-4 py-2 rounded-full hover:bg-emerald-600 transition-colors">Xem chi tiết</a>
+                        <span class="font-bold text-xl text-theme-fire">950.000 VND</span>
+                        <a href="#" class="bg-theme-fire text-white text-sm px-4 py-2 rounded-full hover:bg-red-600 transition-colors">Mua ngay</a>
                     </div>
                 </div>
             </div>
 
-            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:scale-[1.02]">
-                <img src="https://via.placeholder.com/600x400/3B82F6/ffffff?text=Quả+Cầu+Thạch+Anh+Xanh" alt="Quả cầu Thạch Anh Xanh" class="w-full h-48 object-cover">
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:scale-[1.02] mx-auto w-full max-w-sm">
+                <img src="https://via.placeholder.com/600x400/D97706/ffffff?text=Tượng+Tỳ+Hưu+Cẩm+Thạch" alt="Tượng Tỳ Hưu Đá Cẩm Thạch" class="w-full h-48 object-cover">
                 <div class="p-5">
-                    <span class="text-sm font-semibold text-theme-secondary bg-pastel-blue px-3 py-1 rounded-full">Hành Thủy</span>
-                    <h3 class="font-display text-xl font-bold text-gray-800 mt-2 mb-1">Quả Cầu Thạch Anh Xanh</h3>
-                    <p class="text-gray-500 text-sm">Thu hút tài lộc, sự nghiệp và trí tuệ.</p>
-                    <div class="flex items-center justify-between mt-3">
-                        <span class="font-bold text-xl text-theme-secondary">1.900.000 VND</span>
-                        <a href="#" class="bg-theme-secondary text-white text-sm px-4 py-2 rounded-full hover:bg-blue-600 transition-colors">Xem chi tiết</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:scale-[1.02]">
-                <img src="https://via.placeholder.com/600x400/D97706/ffffff?text=Tượng+Tỳ+Hưu+Hoàng+Long" alt="Tượng Tỳ Hưu Thạch Anh Vàng" class="w-full h-48 object-cover">
-                <div class="p-5">
-                    <span class="text-sm font-semibold text-theme-earth bg-pastel-orange px-3 py-1 rounded-full">Hành Thổ</span>
-                    <h3 class="font-display text-xl font-bold text-gray-800 mt-2 mb-1">Tượng Tỳ Hưu Thạch Anh Vàng</h3>
-                    <p class="text-gray-500 text-sm">Bảo vệ của cải và chiêu tài lộc.</p>
+                    <span class="text-sm font-semibold text-theme-earth bg-pastel-orange px-3 py-1 rounded-full">⛰️ Hành thổ</span>
+                    <h3 class="font-display text-xl font-bold text-gray-800 mt-2 mb-1">Tượng tì hưu đá cẩm thạch</h3>
+                    <p class="text-gray-500 text-sm h-12">Biểu tượng của chiêu tài, giữ lộc và sự vững chắc. Hợp mệnh Thổ và Kim.</p>
                     <div class="flex items-center justify-between mt-3">
                         <span class="font-bold text-xl text-theme-earth">3.500.000 VND</span>
-                        <a href="#" class="bg-theme-earth text-white text-sm px-4 py-2 rounded-full hover:bg-amber-700 transition-colors">Xem chi tiết</a>
+                        <a href="#" class="bg-theme-earth text-white text-sm px-4 py-2 rounded-full hover:bg-amber-700 transition-colors">Mua ngay</a>
                     </div>
                 </div>
             </div>
 
-            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:scale-[1.02]">
-                <img src="https://via.placeholder.com/600x400/a0a0a0/ffffff?text=Mặt+Dây+Chuyền+Đá+Mặt+Trăng" alt="Mặt dây chuyền Đá Mặt Trăng" class="w-full h-48 object-cover">
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:scale-[1.02] mx-auto w-full max-w-sm">
+                <img src="https://via.placeholder.com/600x400/10B981/ffffff?text=Quả+Cầu+Đá+Mã+Não+Xanh" alt="Quả Cầu Đá Mã Não Xanh" class="w-full h-48 object-cover">
                 <div class="p-5">
-                    <span class="text-sm font-semibold text-gray-600 bg-gray-200 px-3 py-1 rounded-full">Hành Kim</span>
-                    <h3 class="font-display text-xl font-bold text-gray-800 mt-2 mb-1">Mặt Dây Chuyền Thạch Anh Trắng</h3>
-                    <p class="text-gray-500 text-sm">Tăng cường năng lượng và loại bỏ tiêu cực.</p>
+                    <span class="text-sm font-semibold text-theme-primary bg-pastel-green px-3 py-1 rounded-full">🌳 Hành mộc</span>
+                    <h3 class="font-display text-xl font-bold text-gray-800 mt-2 mb-1">Quả Cầu Đá Mã Não Xanh</h3>
+                    <p class="text-gray-500 text-sm h-12">Mang lại sự sinh trưởng, thịnh vượng và hòa hợp. Hợp mệnh Mộc và Hỏa.</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <span class="font-bold text-xl text-theme-primary">1.800.000 VND</span>
+                        <a href="#" class="bg-theme-primary text-white text-sm px-4 py-2 rounded-full hover:bg-emerald-600 transition-colors">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:scale-[1.02] mx-auto w-full max-w-sm">
+                <img src="https://via.placeholder.com/600x400/a0a0a0/ffffff?text=Dây+Chuyền+Thạch+Anh+Trắng" alt="Dây Chuyền Thạch Anh Trắng" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <span class="text-sm font-semibold text-gray-600 bg-gray-200 px-3 py-1 rounded-full">✨ Hành kim</span>
+                    <h3 class="font-display text-xl font-bold text-gray-800 mt-2 mb-1">Dây Chuyền Thạch Anh Trắng</h3>
+                    <p class="text-gray-500 text-sm h-12">Thanh lọc năng lượng, tăng cường tập trung. Hợp mệnh Kim và Thủy.</p>
                     <div class="flex items-center justify-between mt-3">
                         <span class="font-bold text-xl text-gray-600">680.000 VND</span>
-                        <a href="#" class="bg-gray-600 text-white text-sm px-4 py-2 rounded-full hover:bg-gray-700 transition-colors">Xem chi tiết</a>
+                        <a href="#" class="bg-gray-600 text-white text-sm px-4 py-2 rounded-full hover:bg-gray-700 transition-colors">Mua ngay</a>
                     </div>
                 </div>
             </div>
@@ -261,8 +311,8 @@
         </div>
         
         <div class="text-center mt-16">
-             <a href="#" class="inline-block bg-theme-accent text-white font-bold py-3 px-10 rounded-full text-lg shadow-lg hover:bg-yellow-600 transition-all duration-300 transform hover:scale-105">
-                Xem Tất Cả Sản Phẩm Cửa Hàng
+            <a href="#" class="inline-block bg-theme-accent text-white font-bold py-3 px-10 rounded-full text-lg shadow-lg hover:bg-yellow-600 transition-all duration-300 transform hover:scale-105">
+                Xem tất cả sản phẩm & đá thô
             </a>
         </div>
     </div>

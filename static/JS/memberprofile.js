@@ -6,29 +6,28 @@ const members = [{
     bio: "Người khởi xướng dự án NOVA với niềm đam mê cháy bỏng về du lịch và công nghệ. Luôn tìm kiếm những giải pháp sáng tạo nhất."
 }, {
     name: "Trần Nguyễn Đông Quân",
-    role: "Content Creator",
-    img: "https://ui-avatars.com/api/?name=Tran+Thi+B&background=3B82F6&color=fff&size=200",
-    bio: "Cây bút chủ lực, người thổi hồn vào từng câu chuyện về Ngũ Hành Sơn. Yêu thích văn hóa và lịch sử địa phương."
+    role: "Developer/Co-op founder",
+    img: "/static/IMG/members/dquan.jpg",
+    bio: "Chịu trách nhiệm xây dựng hệ thống website. Luôn đảm bảo trải nghiệm người dùng mượt mà và hiệu ứng bắt mắt"
 }, {
     name: "Lê Vân Phong",
     role: "Developer",
-    img: "https://ui-avatars.com/api/?name=Le+Van+C&background=F59E0B&color=fff&size=200",
-    bio: "Chịu trách nhiệm xây dựng hệ thống website. Luôn đảm bảo trải nghiệm người dùng mượt mà và hiệu ứng bắt mắt."
+    img: "/static/IMG/members/windy.png",
+    bio: "Phụ trách phát triển các tính năng backend và tối ưu hiệu suất hệ thống. Đam mê về mã nguồn sạch và kiến trúc phần mềm."
 }, {
     name: "Phan Ngọc Minh",
     role: "Designer",
     img: "https://ui-avatars.com/api/?name=Pham+Thi+D&background=EF4444&color=fff&size=200",
     bio: "Người tạo nên vẻ đẹp visual cho dự án. Có gu thẩm mỹ tinh tế và khả năng biến ý tưởng thành hình ảnh sống động."
-}, {
-    name: "Hoàng Văn E",
-    role: "Marketing",
-    img: "https://ui-avatars.com/api/?name=Hoang+Van+E&background=8B5CF6&color=fff&size=200",
-    bio: "Mang hình ảnh NOVA đến gần hơn với mọi người. Năng động, nhiệt huyết và luôn tràn đầy ý tưởng mới."
 }];
 
 const carousel = document.getElementById('carousel3D');
-const radius = 400; // Khớp với CSS --carousel-radius (có thể chỉnh sửa nếu cần)
+const radius = 450; // Đã chỉnh sửa để khớp với CSS (hoặc 400 nếu bạn không muốn tăng kích thước vòng xoay)
 let currDeg = 0;
+
+// Thêm biến cho tính năng tự động xoay
+let autoRotateInterval;
+const autoRotateSpeed = 4000; // Tự động xoay sau mỗi 3000ms (3 giây)
 
 // Hàm khởi tạo Cards
 function initCarousel() {
@@ -85,6 +84,23 @@ function updateActiveCard() {
     // (Phần này có thể tinh chỉnh thêm nếu muốn highlight chính xác)
 }
 
+// Hàm khởi động chế độ tự động xoay
+function startAutoRotate() {
+    // Chỉ khởi động nếu chưa có interval nào đang chạy
+    if (!autoRotateInterval) {
+        autoRotateInterval = setInterval(() => {
+            rotateCarousel(1); // Xoay tới thẻ tiếp theo (next)
+        }, autoRotateSpeed);
+    }
+}
+
+// Hàm dừng chế độ tự động xoay
+function stopAutoRotate() {
+    clearInterval(autoRotateInterval);
+    autoRotateInterval = null;
+}
+
+
 // Xử lý Kéo thả chuột (Drag)
 let isDragging = false;
 let startX, currentX;
@@ -93,6 +109,7 @@ let initialDeg = 0;
 const teamScope = document.getElementById('teamScope');
 
 teamScope.addEventListener('mousedown', (e) => {
+    stopAutoRotate(); // DỪNG xoay tự động
     isDragging = true;
     startX = e.pageX;
     initialDeg = currDeg;
@@ -128,10 +145,12 @@ window.addEventListener('mouseup', () => {
     }
 
     carousel.style.transform = `translateZ(-${radius}px) rotateY(${currDeg}deg)`;
+    startAutoRotate(); // KHỞI ĐỘNG LẠI xoay tự động
 });
 
 // Hỗ trợ cảm ứng (Touch) cho mobile
 teamScope.addEventListener('touchstart', (e) => {
+    stopAutoRotate(); // DỪNG xoay tự động
     isDragging = true;
     startX = e.touches[0].pageX;
     initialDeg = currDeg;
@@ -159,10 +178,14 @@ teamScope.addEventListener('touchend', () => {
         currDeg -= remainder;
     }
     carousel.style.transform = `translateZ(-${radius}px) rotateY(${currDeg}deg)`;
+    startAutoRotate(); // KHỞI ĐỘNG LẠI xoay tự động
 });
 
 // Chạy khởi tạo
 initCarousel();
+
+// KHỞI ĐỘNG TỰ ĐỘNG XOAY
+startAutoRotate();
 
 // Điều chỉnh Z-offset ban đầu
 carousel.style.transform = `translateZ(-${radius}px)`;

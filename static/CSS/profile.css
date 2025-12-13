@@ -1,7 +1,7 @@
 .team-scope {
-    --card-width: 280px;
+    --card-width: 380px;
     --card-height: 420px;
-    --carousel-radius: 400px;
+    --carousel-radius: 600px;
     /* Độ rộng vòng xoay */
     perspective: 1200px;
     overflow: hidden;
