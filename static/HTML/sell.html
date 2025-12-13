@@ -42,7 +42,6 @@
 
     <body class="bg-theme-light font-sans text-gray-800 antialiased">
 
-        <!-- Thanh Điều Hướng (Header) -->
         <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-white/50 backdrop-blur-sm">
             <nav class="container mx-auto px-6 py-3 flex items-center justify-between">
                 <a class="font-display font-bold text-xl text-theme-primary flex items-center" href="/static/HTML/main.html">
@@ -97,9 +96,7 @@
                 <button id="mobile-toggle" class="md:hidden px-2 py-1" aria-label="Mở menu">☰</button>
             </div>
         </header>
-        <!-- Nội dung chính -->
         <main>
-            <!-- gợi ý mua quà -->
             <section id="suggest" class="page pt-28 pb-20">
                 <section id="suggest" class="pt-28 pb-20 bg-theme-light">
     <div class="container mx-auto px-6 max-w-4xl">
@@ -108,31 +105,15 @@
         <form id="consultForm" class="bg-white p-6 md:p-10 rounded-2xl shadow-xl space-y-8 border border-gray-100">
 
             <div class="question-group border-l-4 border-theme-secondary pl-4 py-2 bg-pastel-blue">
-                <h3 class="font-semibold text-xl text-gray-800 mb-4">1. Bạn thuộc nhóm tuổi nào? (Chọn 1)</h3>
-                <div class="options grid grid-cols-2 sm:grid-cols-3 gap-3">
-                    <label class="block p-3 rounded-lg bg-white shadow hover:bg-blue-50 transition-colors"><input type="radio" name="tuoi" value="A" required class="mr-2 accent-theme-secondary"> A. Dưới 18</label>
-                    <label class="block p-3 rounded-lg bg-white shadow hover:bg-blue-50 transition-colors"><input type="radio" name="tuoi" value="B" class="mr-2 accent-theme-secondary"> 18–25</label>
-                    <label class="block p-3 rounded-lg bg-white shadow hover:bg-blue-50 transition-colors"><input type="radio" name="tuoi" value="C" class="mr-2 accent-theme-secondary"> 26–35</label>
-                    <label class="block p-3 rounded-lg bg-white shadow hover:bg-blue-50 transition-colors"><input type="radio" name="tuoi" value="D" class="mr-2 accent-theme-secondary"> 36–45</label>
-                    <label class="block p-3 rounded-lg bg-white shadow hover:bg-blue-50 transition-colors"><input type="radio" name="tuoi" value="E" class="mr-2 accent-theme-secondary"> 46–60</label>
-                    <label class="block p-3 rounded-lg bg-white shadow hover:bg-blue-50 transition-colors"><input type="radio" name="tuoi" value="F" class="mr-2 accent-theme-secondary"> Trên 60</label>
+                <h3 class="font-semibold text-xl text-gray-800 mb-4">1. Vui lòng nhập Năm Sinh Dương Lịch của bạn (Ví dụ: 1995)</h3>
+                <div class="options">
+                    <input type="number" name="namSinh" placeholder="Nhập năm sinh (1940-2030)" min="1940" max="2030" class="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-theme-secondary focus:border-theme-secondary">
+                    <p class="text-sm text-gray-500 mt-2">Hệ thống sẽ tự động tra cứu Niên Mệnh (Mệnh theo năm sinh) Nạp Âm chuẩn từ năm 1940 đến 2030.</p>
                 </div>
             </div>
 
-            <div class="question-group border-l-4 border-theme-primary pl-4 py-2 bg-pastel-green">
-    <h3 class="font-semibold text-xl text-gray-800 mb-4">2. Bạn thuộc mệnh gì? (Chọn 1)</h3>
-    <div class="options grid grid-cols-2 sm:grid-cols-3 gap-3">
-        <label class="block p-3 rounded-lg bg-white shadow hover:bg-green-50 transition-colors"><input type="radio" name="menh" value="Kim" required class="mr-2 accent-theme-primary"> Kim</label>
-        <label class="block p-3 rounded-lg bg-white shadow hover:bg-green-50 transition-colors"><input type="radio" name="menh" value="Mộc" class="mr-2 accent-theme-primary"> Mộc</label>
-        <label class="block p-3 rounded-lg bg-white shadow hover:bg-green-50 transition-colors"><input type="radio" name="menh" value="Thủy" class="mr-2 accent-theme-primary"> Thủy</label>
-        <label class="block p-3 rounded-lg bg-white shadow hover:bg-green-50 transition-colors"><input type="radio" name="menh" value="Hỏa" class="mr-2 accent-theme-primary"> Hỏa</label>
-        <label class="block p-3 rounded-lg bg-white shadow hover:bg-green-50 transition-colors"><input type="radio" name="menh" value="Thổ" class="mr-2 accent-theme-primary"> Thổ</label>
-        <label class="block p-3 rounded-lg bg-white shadow hover:bg-green-50 transition-colors"><input type="radio" name="menh" value="KhongBiet" class="mr-2 accent-theme-primary"> Tôi không biết</label>
-    </div>
-</div>
-
             <div class="question-group border-l-4 border-theme-accent pl-4 py-2 bg-pastel-yellow">
-                <h3 class="font-semibold text-xl text-gray-800 mb-4">3. Bạn đang tìm sản phẩm với mục đích gì? (Chọn nhiều đáp án)</h3>
+                <h3 class="font-semibold text-xl text-gray-800 mb-4">2. Bạn đang tìm sản phẩm với mục đích gì? (Chọn nhiều đáp án)</h3>
                 <div class="options grid grid-cols-2 sm:grid-cols-3 gap-3">
                     <label class="block p-3 rounded-lg bg-white shadow hover:bg-yellow-50 transition-colors"><input type="checkbox" name="mucDich" value="BinhAn" class="mr-2 accent-theme-accent"> Bình an – Hộ thân</label>
                     <label class="block p-3 rounded-lg bg-white shadow hover:bg-yellow-50 transition-colors"><input type="checkbox" name="mucDich" value="TaiLoc" class="mr-2 accent-theme-accent"> Thu hút tài lộc – May mắn</label>
@@ -144,7 +125,7 @@
             </div>
 
             <div class="question-group border-l-4 border-theme-fire pl-4 py-2 bg-pastel-red">
-                <h3 class="font-semibold text-xl text-gray-800 mb-4">4. Bạn muốn mua loại sản phẩm nào? (Chọn nhiều đáp án)</h3>
+                <h3 class="font-semibold text-xl text-gray-800 mb-4">3. Bạn muốn mua loại sản phẩm nào? (Chọn nhiều đáp án)</h3>
                 <div class="options grid grid-cols-2 sm:grid-cols-3 gap-3">
                     <label class="block p-3 rounded-lg bg-white shadow hover:bg-red-50 transition-colors"><input type="checkbox" name="loaiSP" value="VongTay" class="mr-2 accent-theme-fire"> Vòng tay phong thủy</label>
                     <label class="block p-3 rounded-lg bg-white shadow hover:bg-red-50 transition-colors"><input type="checkbox" name="loaiSP" value="TuongNho" class="mr-2 accent-theme-fire"> Tượng nhỏ</label>
@@ -156,7 +137,7 @@
             </div>
 
             <div class="question-group border-l-4 border-theme-earth pl-4 py-2 bg-pastel-orange">
-                <h3 class="font-semibold text-xl text-gray-800 mb-4">5. Bạn thích mức giá nào? (Chọn nhiều đáp án)</h3>
+                <h3 class="font-semibold text-xl text-gray-800 mb-4">4. Bạn thích mức giá nào? (Chọn nhiều đáp án)</h3>
                 <div class="options grid grid-cols-2 sm:grid-cols-3 gap-3">
                     <label class="block p-3 rounded-lg bg-white shadow hover:bg-orange-50 transition-colors"><input type="checkbox" name="gia" value="Duoi300" class="mr-2 accent-theme-earth"> Dưới 300.000 VND</label>
                     <label class="block p-3 rounded-lg bg-white shadow hover:bg-orange-50 transition-colors"><input type="checkbox" name="gia" value="300-700" class="mr-2 accent-theme-earth"> 300.000 – 700.000 VND</label>
@@ -168,7 +149,7 @@
             </div>
             
             <div class="question-group border-l-4 border-gray-400 pl-4 py-2 bg-gray-50">
-                <h3 class="font-semibold text-xl text-gray-800 mb-4">6. Bạn muốn ưu tiên điều gì khi chọn sản phẩm? (Chọn nhiều đáp án)</h3>
+                <h3 class="font-semibold text-xl text-gray-800 mb-4">5. Bạn muốn ưu tiên điều gì khi chọn sản phẩm? (Chọn nhiều đáp án)</h3>
                 <div class="options grid grid-cols-2 sm:grid-cols-3 gap-3">
                     <label class="block p-3 rounded-lg bg-white shadow hover:bg-gray-100 transition-colors"><input type="checkbox" name="uuTien" value="PhongThuy" class="mr-2 accent-gray-600"> Đúng phong thủy nhất</label>
                     <label class="block p-3 rounded-lg bg-white shadow hover:bg-gray-100 transition-colors"><input type="checkbox" name="uuTien" value="ThietKe" class="mr-2 accent-gray-600"> Thiết kế đẹp – hiện đại</label>
@@ -179,7 +160,7 @@
             </div>
 
             <div class="question-group border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50">
-                <h3 class="font-semibold text-xl text-gray-800 mb-4">7. Bạn muốn trải nghiệm mua sắm kiểu nào? (Chọn 1-2)</h3>
+                <h3 class="font-semibold text-xl text-gray-800 mb-4">6. Bạn muốn trải nghiệm mua sắm kiểu nào? (Chọn 1-2)</h3>
                 <div class="options grid grid-cols-2 sm:grid-cols-2 gap-3">
                     <label class="block p-3 rounded-lg bg-white shadow hover:bg-indigo-100 transition-colors"><input type="checkbox" name="muaSam" value="TrucTiep" class="mr-2 accent-indigo-600"> Xem sản phẩm trực tiếp tại cửa hàng</label>
                     <label class="block p-3 rounded-lg bg-white shadow hover:bg-indigo-100 transition-colors"><input type="checkbox" name="muaSam" value="HinhAnh" class="mr-2 accent-indigo-600"> Xem qua hình ảnh + gợi ý đường đi</label>
@@ -200,8 +181,7 @@
     </div>
 </section>
 
-            <!-- các cửa hàng đá mỹ nghệ -->
-<section id="shop" class="page py-20 bg-white">
+            <section id="shop" class="page py-20 bg-white">
     <div class="container mx-auto px-6 max-w-7xl"> 
         <h2 class="font-display text-4xl font-bold text-center text-gray-800 mb-4">💎 CÁC CỬA HÀNG ĐÁ MỸ NGHỆ TIÊU BIỂU HIỆN ĐANG LIÊN KẾT VỚI CHÚNG TÔI</h2>
         <p class="text-center text-xl text-gray-600 mb-12">Khám phá các địa chỉ uy tín với sản phẩm đá tự nhiên ở Ngũ Hành Sơn</p>
@@ -319,40 +299,4 @@
 </section>
 <script src="/static/JS/suggest.js"></script> 
 </body>
-</html>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer class="bg-gray-800 text-gray-300 py-12">
-            <div class="container mx-auto px-6 text-center">
-                <p class="font-display text-lg font-semibold mb-2">Dự án "Khám phá & Trải nghiệm Ngũ Hành Sơn"</p>
-                <p>&copy; 2025 - Thực hiện bởi Nova. Phát triển với tình yêu Đà Nẵng.</p>
-            </div>
-        </footer>
-
-        <!-- Modal Thông Báo -->
-        <div id="alert-modal" class="fixed bottom-6 right-6 z-[150] bg-gray-900 text-white px-6 py-4 rounded-lg shadow-2xl hidden transition-all duration-300" style="transform: translateY(20px); opacity: 0;">
-            <p id="alert-message"></p>
-        </div>
-
-        <script src="/static/JS/main.js"></script>
-        <script src="/static/JS/save.js"></script>
-        <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
-        <script>
-            new CozeWebSDK.WebChatClient({
-                config: {
-                    type: 'bot',
-                    bot_id: '7573626748227616821',
-                    isIframe: false,
-                },
-                auth: {
-                    type: 'token',
-                    token: 'pat_Ehq9D3fhPg4nAKgS05CYg5VzcyHYa1BkpEe0lpXyWdFzpFPczJDDfojMhJakNHqZ',
-                    onRefreshToken: async() => 'token'
-                },
-            });
-        </script>
-    </body>
-
 </html>
