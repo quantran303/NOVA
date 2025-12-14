@@ -1,4 +1,28 @@
 /* ===== GLOBAL STYLES ===== */
+.skiptranslate {
+  display: none !important;
+}
+
+#lang-select{
+    background-color: transparent !important;
+}
+
+
+/* Fix page jump caused by the banner */
+body {
+  top: 0 !important;
+  scroll-behavior: smooth;
+}
+
+/* Hide the Google Translate icon */
+.goog-logo-link {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  color: transparent !important;
+}
+/* ===== GLOBAL STYLES ===== */
 
 body {
     scroll-behavior: smooth;
